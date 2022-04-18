@@ -16,6 +16,6 @@ services:
       MC_PROP_MOTD: {{ minecraft_server_motd }}
       MC_PROP_WHITELIST: "{{ minecraft_server_enable_whitelist }}"
       MC_PROP_ENFORCE_WHITELIST: "{{ minecraft_server_enforce_whitelist }}"
-      EULA: "{{ minecraft_server_accept_eula }}""
+      EULA: "{{ minecraft_server_accept_eula }}"
     volumes:
       - mcdata:/minecraft-data
