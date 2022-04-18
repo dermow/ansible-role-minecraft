@@ -12,10 +12,10 @@ services:
       MC_TYPE: {{ minecraft_server_type }}
       MC_PROP_RCON_PASSWORD: {{ minecraft_rcon_password }}
       MC_MEMORY_MIN: {{ minecraft_java_memory_min }}
-      MC_MEMORY_MAX: {{ minecraft_java_memory_min }}
+      MC_MEMORY_MAX: {{ minecraft_java_memory_max }}
       MC_PROP_MOTD: {{ minecraft_server_motd }}
-      MC_PROP_WHITELIST: {{ minecraft_server_enable_whitelist }}
-      MC_PROP_ENFORCE_WHITELIST: {{ minecraft_server_enforce_whitelist }}
-      EULA: {{ minecraft_server_accept_eula }}
+      MC_PROP_WHITELIST: "{{ minecraft_server_enable_whitelist }}"
+      MC_PROP_ENFORCE_WHITELIST: "{{ minecraft_server_enforce_whitelist }}"
+      EULA: "{{ minecraft_server_accept_eula }}""
     volumes:
       - mcdata:/minecraft-data
