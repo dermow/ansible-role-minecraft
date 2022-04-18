@@ -1,0 +1,18 @@
+---
+- name: assert that EULA is accepted
+  assert:
+    that: minecraft_server_accept_eula
+
+- name: install rcon
+  include_tasks: ./install_rcon.yml
+
+- name: make sure that directory is created
+  file:
+    path: "{{ minecraft_compose_directory }}"
+    state: directory
+    mode: 0770
+
+- name: temnplate docker compose file
+  template:
+    src: docker-compose.yml.j2
+    dest: "{{ minecraft_compose_directory }}/docker-compose.yml"

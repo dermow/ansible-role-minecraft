@@ -1,0 +1,16 @@
+---
+minecraft_docker_image: dermow/minecraft-server:1.18
+minecraft_version: 1.18.2
+minecraft_server_type: spigot
+minecraft_server_port: 255605
+minecraft_rcon_password: rcon1337_changeme
+minecraft_java_memory_min: 512M
+minecraft_java_memory_max: 2G
+minecraft_server_motd: "My Minecraft server based on dermow/minecraft-server"
+minecraft_server_enable_whitelist: true
+minecraft_server_enforce_whitelist: true
+minecraft_server_accept_eula: false # licence, needs to be overwritten with TRUE
+minecraft_dynmap_enabled: false
+minecraft_dynmap_port: 8123
+minecraft_server_name: minecraft_srv
+minecraft_compose_directory: /opt/docker/minecraft_srv
