@@ -1,2 +1,3 @@
 - name: docker compose up
   shell: "cd {{ minecraft_compose_directory }} && docker-compose up -d"
+  when: minecraft_compose_state == 'started'
