@@ -30,3 +30,9 @@
   when: 
     - minecraft_compose_state == 'down'
     - check.rc == 0
+
+- name: enforce docker compose up if required
+  shell: "cd {{ minecraft_compose_directory }} && docker-compose up -d"
+  when: 
+    - minecraft_compose_state == 'up'
+    - check.rc != 0
