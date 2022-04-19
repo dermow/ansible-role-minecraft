@@ -6,7 +6,9 @@ services:
     image: {{ minecraft_docker_image }}
     ports:
       - {{ minecraft_server_port }}:25565
+{% if minecraft_dynmap_enabled %}
       - {{ minecraft_dynmap_port }}:8123
+{% endif %}
     environment:
       MC_VERSION: {{ minecraft_version }}
       MC_TYPE: {{ minecraft_server_type }}
