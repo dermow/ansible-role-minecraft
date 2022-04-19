@@ -1,2 +1,2 @@
 - name: docker compose up
-  shell: "cd {{ minecraft_enforce_compose_up }} && docker-compose up -d"
+  shell: "cd {{ minecraft_compose_directory }} && docker-compose up -d"
