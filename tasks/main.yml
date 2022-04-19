@@ -25,6 +25,10 @@
   failed_when: false
   register: check
 
+- name: some debug output
+  debug:
+    msg: "server state: {{ check.rc }}"
+
 - name: enforce docker compose down if required
   shell: "cd {{ minecraft_compose_directory }} && docker-compose down"
   when: 
