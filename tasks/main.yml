@@ -27,7 +27,7 @@
 
 - name: some debug output
   debug:
-    msg: "server state: {{ check.rc }}"
+    msg: "server at {{ minecraft_compose_directory }} has state: {{ check.rc }}"
 
 - name: enforce docker compose down if required
   shell: "cd {{ minecraft_compose_directory }} && docker-compose down"
