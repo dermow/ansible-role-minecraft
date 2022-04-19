@@ -28,5 +28,5 @@
 - name: enforce docker compose down if required
   shell: "cd {{ minecraft_compose_directory }} && docker-compose down"
   when: 
-    - minecraft_compose_state == 'stopped'
+    - minecraft_compose_state == 'down'
     - check.rc == 0
